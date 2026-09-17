@@ -1,0 +1,43 @@
+{
+  "meta": { "title": "Crex Websites | Diseño y desarrollo web", "description": "Sitios web bilingües, rápidos y diseñados para convertir visitas en clientes." },
+  "nav": { "work": "Trabajo", "services": "Servicios", "process": "Proceso", "contact": "Contacto", "quote": "Solicitar cotización", "menu": "Abrir menú", "language": "Cambiar a inglés" },
+  "hero": {
+    "eyebrow": "Estudio web independiente · Remoto",
+    "titleStart": "Tu negocio merece una web que",
+    "titleAccent": "trabaje en serio.",
+    "body": "Diseño y desarrollo experiencias digitales rápidas, bilingües y pensadas para convertir atención en oportunidades reales.",
+    "primary": "Cuéntame tu proyecto", "secondary": "Ver trabajo", "availability": "Aceptando nuevos proyectos", "scroll": "Explorar"
+  },
+  "ticker": ["Diseño a medida", "Desarrollo moderno", "Móvil primero", "EN + ES", "SEO técnico", "Soporte directo"],
+  "work": {
+    "eyebrow": "Trabajo seleccionado", "title": "Prueba real, no promesas vacías.",
+    "intro": "Cada proyecto combina estrategia, diseño y código para ayudar a un negocio a verse tan profesional como el servicio que ofrece.",
+    "caseLabel": "Caso 01", "name": "Teo’s Barbershop", "category": "Sitio para negocio local · CDMX",
+    "description": "Una presencia bilingüe para una barbería de la Condesa, con servicios claros, contacto directo por WhatsApp y una experiencia pensada para móvil.",
+    "visit": "Visitar sitio", "live": "Sitio en vivo", "metrics": ["Bilingüe", "Responsive", "WhatsApp directo"]
+  },
+  "services": {
+    "eyebrow": "Lo que construyo", "title": "Todo lo necesario para salir bien al mundo.",
+    "items": [
+      { "number": "01", "title": "Diseño web", "body": "Dirección visual y experiencia a medida para que tu marca sea clara, memorable y fácil de usar." },
+      { "number": "02", "title": "Desarrollo", "body": "Sitios rápidos y responsivos con tecnología moderna, código mantenible y atención al detalle." },
+      { "number": "03", "title": "Conversión", "body": "Llamadas a la acción, formularios, WhatsApp y recorridos que convierten visitantes en conversaciones." },
+      { "number": "04", "title": "Crecimiento", "body": "SEO técnico, analítica, contenido bilingüe y una base lista para pagos y nuevas funciones." }
+    ]
+  },
+  "process": {
+    "eyebrow": "Cómo trabajamos", "title": "Un proceso claro, de la primera charla al lanzamiento.",
+    "steps": [
+      { "number": "01", "title": "Descubrimiento", "body": "Entiendo tu negocio, clientes y objetivos antes de diseñar una sola pantalla." },
+      { "number": "02", "title": "Dirección", "body": "Definimos estructura, contenido y una identidad visual que se sienta propia." },
+      { "number": "03", "title": "Construcción", "body": "Desarrollo, pruebo y afino cada vista para escritorio y celular." },
+      { "number": "04", "title": "Lanzamiento", "body": "Publicamos, medimos y dejamos una base preparada para seguir creciendo." }
+    ]
+  },
+  "statement": { "line1": "Tu sitio no es decoración.", "line2": "Es tu mejor vendedor, abierto 24/7." },
+  "contact": {
+    "eyebrow": "Hablemos", "title": "¿Qué podemos construir juntos?", "body": "Cuéntame un poco sobre tu negocio. Te responderé personalmente para conversar sobre alcance, tiempos y una cotización clara.",
+    "name": "Nombre", "namePlaceholder": "Tu nombre", "email": "Correo", "emailPlaceholder": "tu@empresa.com", "business": "Negocio", "businessPlaceholder": "Nombre de tu negocio", "project": "¿Qué necesitas?", "projectPlaceholder": "Un nuevo sitio, rediseño, tienda en línea...", "send": "Enviar solicitud", "or": "o escríbeme directamente", "emailAction": "Enviar correo", "canada": "WhatsApp Inglés", "mexico": "WhatsApp Español", "response": "Respuesta personal, normalmente en 1–2 días hábiles.", "messageIntro": "Hola, soy", "messageBusiness": "de", "messageProject": "Estoy buscando"
+  },
+  "footer": { "tagline": "Sitios claros. Código sólido. Negocios más fuertes.", "rights": "Crex Websites. Todos los derechos reservados.", "back": "Volver arriba" }
+}

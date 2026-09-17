@@ -1,0 +1,43 @@
+{
+  "meta": { "title": "Crex Websites | Web design and development", "description": "Fast, bilingual websites designed to turn visits into customers." },
+  "nav": { "work": "Work", "services": "Services", "process": "Process", "contact": "Contact", "quote": "Request a quote", "menu": "Open menu", "language": "Cambiar a español" },
+  "hero": {
+    "eyebrow": "Independent web studio · Remote",
+    "titleStart": "Your business deserves a website that",
+    "titleAccent": "works hard.",
+    "body": "I design and build fast, bilingual digital experiences made to turn attention into real opportunities.",
+    "primary": "Tell me about your project", "secondary": "See the work", "availability": "Now booking new projects", "scroll": "Explore"
+  },
+  "ticker": ["Custom design", "Modern development", "Mobile first", "EN + ES", "Technical SEO", "Direct support"],
+  "work": {
+    "eyebrow": "Selected work", "title": "Real proof, no empty promises.",
+    "intro": "Every project brings strategy, design, and code together so a business looks as professional as the service it provides.",
+    "caseLabel": "Case 01", "name": "Teo’s Barbershop", "category": "Local business website · Mexico City",
+    "description": "A bilingual presence for a Condesa barbershop, with clear services, direct WhatsApp contact, and a mobile-first customer experience.",
+    "visit": "Visit website", "live": "Live website", "metrics": ["Bilingual", "Responsive", "Direct WhatsApp"]
+  },
+  "services": {
+    "eyebrow": "What I build", "title": "Everything you need to show up well online.",
+    "items": [
+      { "number": "01", "title": "Web design", "body": "Tailored visual direction and user experience that makes your brand clear, memorable, and easy to use." },
+      { "number": "02", "title": "Development", "body": "Fast, responsive websites using modern technology, maintainable code, and careful execution." },
+      { "number": "03", "title": "Conversion", "body": "Calls to action, forms, WhatsApp, and journeys that turn visitors into real conversations." },
+      { "number": "04", "title": "Growth", "body": "Technical SEO, analytics, bilingual content, and a foundation ready for payments and new features." }
+    ]
+  },
+  "process": {
+    "eyebrow": "How it works", "title": "A clear path from first conversation to launch.",
+    "steps": [
+      { "number": "01", "title": "Discovery", "body": "I learn your business, customers, and goals before designing a single screen." },
+      { "number": "02", "title": "Direction", "body": "We define the structure, content, and visual identity that feels distinctly yours." },
+      { "number": "03", "title": "Build", "body": "I develop, test, and refine every view across desktop and mobile." },
+      { "number": "04", "title": "Launch", "body": "We publish, measure, and leave you with a foundation built to keep growing." }
+    ]
+  },
+  "statement": { "line1": "Your website is not decoration.", "line2": "It is your best salesperson, open 24/7." },
+  "contact": {
+    "eyebrow": "Start a conversation", "title": "What can we build together?", "body": "Tell me a little about your business. I’ll respond personally to discuss scope, timing, and a clear quote.",
+    "name": "Name", "namePlaceholder": "Your name", "email": "Email", "emailPlaceholder": "you@company.com", "business": "Business", "businessPlaceholder": "Your business name", "project": "What do you need?", "projectPlaceholder": "A new website, redesign, online store...", "send": "Send request", "or": "or reach me directly", "emailAction": "Send email", "canada": "WhatsApp English", "mexico": "WhatsApp Spanish", "response": "A personal response, usually within 1–2 business days.", "messageIntro": "Hi, I'm", "messageBusiness": "from", "messageProject": "I'm looking for"
+  },
+  "footer": { "tagline": "Clear websites. Solid code. Stronger businesses.", "rights": "Crex Websites. All rights reserved.", "back": "Back to top" }
+}
