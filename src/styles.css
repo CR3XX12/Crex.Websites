@@ -18,16 +18,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .languageButton, .menuButton { display: inline-flex; height: 40px; align-items: center; justify-content: center; gap: 6px; padding: 0 11px; color: #fff; border: 1px solid rgba(255,255,255,.35); border-radius: 4px; background: transparent; cursor: pointer; font-size: .78rem; font-weight: 700; }
 .headerCta { display: inline-flex; height: 40px; align-items: center; gap: 8px; padding: 0 14px; color: #101010; border-radius: 4px; background: #fff; font-size: .82rem; font-weight: 700; }
 .menuButton { display: none; width: 40px; padding: 0; }
-.hero { position: relative; min-height: 94vh; display: flex; align-items: flex-end; overflow: hidden; color: #fff; background: #171717; }
+.hero { position: relative; min-height: max(94vh, 940px); display: flex; align-items: flex-end; overflow: hidden; color: #fff; background: #171717; }
 .heroImage, .heroShade { position: absolute; inset: 0; width: 100%; height: 100%; }
 .heroImage { object-fit: cover; object-position: center; }
 .heroShade { background: linear-gradient(90deg, rgba(8,8,8,.88) 0%, rgba(8,8,8,.61) 38%, rgba(8,8,8,.1) 73%), linear-gradient(0deg, rgba(8,8,8,.55), transparent 45%); }
-.heroInner { position: relative; z-index: 1; width: min(920px, calc(100% - 36px)); margin: 0 0 clamp(76px, 11vh, 124px) clamp(18px, 7vw, 110px); }
+.heroInner { position: relative; z-index: 1; width: min(1020px, calc(100% - 36px)); margin: 0 0 clamp(76px, 11vh, 124px) clamp(18px, 7vw, 110px); }
 .eyebrow { margin: 0 0 20px; color: #e42725; font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
 .eyebrow.light { color: #fff; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2, h3 { font-family: "Manrope", sans-serif; letter-spacing: 0; }
-h1 { max-width: 900px; margin-bottom: 26px; font-size: clamp(3.3rem, 7.4vw, 7.5rem); line-height: .93; font-weight: 700; }
+h1 { max-width: 1020px; margin-bottom: 26px; font-size: clamp(3.3rem, 7vw, 7rem); line-height: .93; font-weight: 700; }
 h1 em { display: block; color: #f0c82d; font-style: normal; }
 .heroCopy { max-width: 610px; margin-bottom: 32px; color: rgba(255,255,255,.8); font-size: clamp(1rem, 1.5vw, 1.22rem); line-height: 1.65; }
 .heroActions { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -85,12 +85,15 @@ h1 em { display: block; color: #f0c82d; font-style: normal; }
 .directLinks a { display: flex; align-items: center; gap: 14px; padding: 16px; background: #1239d6; }
 .directLinks small { display: block; margin-top: 3px; color: rgba(255,255,255,.6); }
 .quoteForm { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding: clamp(24px, 4vw, 46px); color: #161616; border-radius: 6px; background: #f4f1ea; }
+.botcheck { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
 .quoteForm label { display: grid; gap: 8px; font-size: .76rem; font-weight: 700; text-transform: uppercase; }
 .quoteForm input, .quoteForm textarea { width: 100%; padding: 13px 0; color: #161616; border: 0; border-bottom: 1px solid #aaa; border-radius: 0; outline: 0; background: transparent; resize: vertical; font-size: .98rem; text-transform: none; }
 .quoteForm input:focus, .quoteForm textarea:focus { border-color: #1239d6; }
 .fullField { grid-column: 1 / -1; }
 .formButton { grid-column: 1 / -1; color: #fff; background: #e42725; }
+.formButton:disabled { cursor: wait; opacity: .68; }
 .responseNote { grid-column: 1 / -1; margin: 0; color: #6b6b6b; text-align: center; font-size: .75rem; }
+.successMessage { color: #147a35; font-weight: 700; }
 footer { padding: 55px clamp(18px, 7vw, 110px) 30px; color: #fff; background: #111; }
 .footerLogo { margin-bottom: 55px; }
 footer > p { max-width: 700px; margin-bottom: 55px; font-family: "Manrope", sans-serif; font-size: clamp(2rem, 4vw, 4.5rem); font-weight: 700; line-height: 1.05; }
@@ -112,7 +115,7 @@ footer > div a { display: flex; align-items: center; gap: 6px; color: #fff; }
   .logo { font-size: .78rem; }
   .logoMark { width: 31px; height: 31px; }
   .nav { inset-block-start: 64px; }
-  .hero { min-height: 760px; }
+  .hero { min-height: max(100svh, 780px); }
   .heroImage { object-position: 61% center; }
   .heroShade { background: linear-gradient(0deg, rgba(8,8,8,.94) 0%, rgba(8,8,8,.68) 58%, rgba(8,8,8,.2)); }
   .heroInner { width: calc(100% - 28px); margin: 0 14px 115px; }

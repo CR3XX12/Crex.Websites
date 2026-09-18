@@ -20,6 +20,7 @@ function getInitialLanguage(): Language {
 function App() {
   const [language, setLanguage] = useState<Language>(getInitialLanguage);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [formStatus, setFormStatus] = useState<"idle" | "sending" | "success" | "error" | "unconfigured">("idle");
   const content = translations[language];
 
   useEffect(() => {
@@ -32,16 +33,32 @@ function App() {
   const closeMenu = () => setMenuOpen(false);
   const toggleLanguage = () => setLanguage((current) => current === "es" ? "en" : "es");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
     const data = new FormData(event.currentTarget);
-    const name = String(data.get("name"));
-    const business = String(data.get("business"));
-    const project = String(data.get("project"));
-    const email = String(data.get("email"));
-    const subject = encodeURIComponent(`Website inquiry — ${business || name}`);
-    const body = encodeURIComponent(`${content.contact.messageIntro} ${name}${business ? ` ${content.contact.messageBusiness} ${business}` : ""}.\n\n${content.contact.messageProject}:\n${project}\n\nEmail: ${email}`);
-    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+    if (!accessKey) {
+      setFormStatus("unconfigured");
+      return;
+    }
+
+    data.append("access_key", accessKey);
+    data.append("subject", `New Crex Websites inquiry — ${String(data.get("business") || data.get("name"))}`);
+    data.append("from_name", "Crex Websites");
+    data.append("language", language.toUpperCase());
+    setFormStatus("sending");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: data });
+      const result = await response.json() as { success?: boolean };
+      if (!response.ok || !result.success) throw new Error("Submission failed");
+      form.reset();
+      setFormStatus("success");
+    } catch {
+      setFormStatus("error");
+    }
   }
 
   return (
@@ -140,12 +157,20 @@ function App() {
             </div>
           </div>
           <form className="quoteForm" onSubmit={handleSubmit}>
+            <input className="botcheck" type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" />
             <label>{content.contact.name}<input name="name" required placeholder={content.contact.namePlaceholder} /></label>
             <label>{content.contact.email}<input name="email" type="email" required placeholder={content.contact.emailPlaceholder} /></label>
             <label className="fullField">{content.contact.business}<input name="business" placeholder={content.contact.businessPlaceholder} /></label>
             <label className="fullField">{content.contact.project}<textarea name="project" required rows={5} placeholder={content.contact.projectPlaceholder} /></label>
-            <button className="button formButton" type="submit">{content.contact.send}<ArrowRight size={19} /></button>
-            <p className="responseNote">{content.contact.response}</p>
+            <button className="button formButton" type="submit" disabled={formStatus === "sending"}>
+              {formStatus === "sending" ? content.contact.sending : content.contact.send}<ArrowRight size={19} />
+            </button>
+            <p className={`responseNote ${formStatus === "success" ? "successMessage" : ""}`} aria-live="polite">
+              {formStatus === "success" && content.contact.success}
+              {formStatus === "error" && content.contact.error}
+              {formStatus === "unconfigured" && content.contact.unconfigured}
+              {formStatus === "idle" && content.contact.response}
+            </p>
           </form>
         </section>
       </main>

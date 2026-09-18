@@ -12,4 +12,9 @@ npm run build
 
 Spanish is the default language. The selected language is stored in `localStorage`, and all customer-facing content is maintained in `src/locales/es.json` and `src/locales/en.json`.
 
-The quote form opens the visitor's email client with a prefilled request. A server-side form endpoint and online deposits can be integrated later without redesigning the interface.
+The quote form uses Web3Forms to deliver submissions directly to the configured inbox without opening the visitor's email app.
+
+1. Create an access key for the destination inbox at https://web3forms.com/
+2. For local development, copy `.env.example` to `.env.local` and add the key.
+3. In Vercel, add `VITE_WEB3FORMS_ACCESS_KEY` in Project Settings > Environment Variables for Production and Preview.
+4. Redeploy after adding or changing the environment variable.
